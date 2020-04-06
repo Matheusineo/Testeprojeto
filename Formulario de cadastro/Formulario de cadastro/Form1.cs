@@ -69,7 +69,7 @@ namespace Formulario_de_cadastro
             txtNumber.Text = "";
             txtPassword.Text = "";
 
-            MessageBox.Show("Processo cancelado.");
+            MessageBox.Show("Processo cancelado,Por favor,coloque novamente as suas informações de usuario.");
         }
     }
 }
