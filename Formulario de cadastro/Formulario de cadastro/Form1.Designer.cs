@@ -58,9 +58,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.rbtnMale = new System.Windows.Forms.RadioButton();
+            this.rbtnOther = new System.Windows.Forms.RadioButton();
+            this.rbtnFemale = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtName
@@ -82,18 +87,20 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(8, 13);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(45, 16);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Nome";
             // 
             // lblLastname
             // 
             this.lblLastname.AutoSize = true;
+            this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastname.Location = new System.Drawing.Point(171, 13);
             this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(61, 13);
+            this.lblLastname.Size = new System.Drawing.Size(79, 16);
             this.lblLastname.TabIndex = 3;
             this.lblLastname.Text = "Sobrenome";
             // 
@@ -107,9 +114,10 @@
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
+            this.lblCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpf.Location = new System.Drawing.Point(8, 73);
             this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(27, 13);
+            this.lblCpf.Size = new System.Drawing.Size(34, 16);
             this.lblCpf.TabIndex = 7;
             this.lblCpf.Text = "CPF";
             // 
@@ -153,9 +161,10 @@
             // lblState
             // 
             this.lblState.AutoSize = true;
+            this.lblState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblState.Location = new System.Drawing.Point(8, 16);
             this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(40, 13);
+            this.lblState.Size = new System.Drawing.Size(51, 16);
             this.lblState.TabIndex = 9;
             this.lblState.Text = "Estado";
             // 
@@ -169,9 +178,10 @@
             // lblRg
             // 
             this.lblRg.AutoSize = true;
+            this.lblRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRg.Location = new System.Drawing.Point(171, 73);
             this.lblRg.Name = "lblRg";
-            this.lblRg.Size = new System.Drawing.Size(23, 13);
+            this.lblRg.Size = new System.Drawing.Size(28, 16);
             this.lblRg.TabIndex = 11;
             this.lblRg.Text = "RG";
             // 
@@ -232,9 +242,10 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(11, 7);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.Size = new System.Drawing.Size(46, 16);
             this.lblEmail.TabIndex = 18;
             this.lblEmail.Text = "E-mail";
             // 
@@ -242,18 +253,20 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(174, 7);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(38, 13);
+            this.lblPassword.Size = new System.Drawing.Size(47, 16);
             this.lblPassword.TabIndex = 19;
             this.lblPassword.Text = "Senha";
             // 
             // lblPublicplace
             // 
             this.lblPublicplace.AutoSize = true;
+            this.lblPublicplace.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPublicplace.Location = new System.Drawing.Point(8, 82);
             this.lblPublicplace.Name = "lblPublicplace";
-            this.lblPublicplace.Size = new System.Drawing.Size(61, 13);
+            this.lblPublicplace.Size = new System.Drawing.Size(78, 16);
             this.lblPublicplace.TabIndex = 20;
             this.lblPublicplace.Text = "Logradouro";
             // 
@@ -267,6 +280,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.txtNeighborhood);
             this.panel2.Controls.Add(this.lblNeighborhood);
             this.panel2.Controls.Add(this.lblCep);
@@ -281,15 +295,16 @@
             this.panel2.Controls.Add(this.lblCity);
             this.panel2.Location = new System.Drawing.Point(12, 146);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(333, 194);
+            this.panel2.Size = new System.Drawing.Size(333, 285);
             this.panel2.TabIndex = 22;
             // 
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
+            this.lblNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumber.Location = new System.Drawing.Point(171, 82);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(44, 13);
+            this.lblNumber.Size = new System.Drawing.Size(56, 16);
             this.lblNumber.TabIndex = 23;
             this.lblNumber.Text = "Numero";
             // 
@@ -319,9 +334,10 @@
             // lblNeighborhood
             // 
             this.lblNeighborhood.AutoSize = true;
+            this.lblNeighborhood.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNeighborhood.Location = new System.Drawing.Point(171, 140);
             this.lblNeighborhood.Name = "lblNeighborhood";
-            this.lblNeighborhood.Size = new System.Drawing.Size(34, 13);
+            this.lblNeighborhood.Size = new System.Drawing.Size(44, 16);
             this.lblNeighborhood.TabIndex = 23;
             this.lblNeighborhood.Text = "Bairro";
             // 
@@ -339,14 +355,15 @@
             this.panel3.Controls.Add(this.txtEmail);
             this.panel3.Controls.Add(this.lblPassword);
             this.panel3.Controls.Add(this.lblEmail);
-            this.panel3.Location = new System.Drawing.Point(12, 346);
+            this.panel3.Location = new System.Drawing.Point(12, 437);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(333, 61);
             this.panel3.TabIndex = 23;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(270, 413);
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(270, 504);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 24;
@@ -356,7 +373,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(169, 413);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(169, 504);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 25;
@@ -364,13 +382,62 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // rbtnMale
+            // 
+            this.rbtnMale.AutoSize = true;
+            this.rbtnMale.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnMale.Location = new System.Drawing.Point(6, 18);
+            this.rbtnMale.Name = "rbtnMale";
+            this.rbtnMale.Size = new System.Drawing.Size(87, 20);
+            this.rbtnMale.TabIndex = 27;
+            this.rbtnMale.TabStop = true;
+            this.rbtnMale.Text = "Masculino";
+            this.rbtnMale.UseVisualStyleBackColor = false;
+            // 
+            // rbtnOther
+            // 
+            this.rbtnOther.AutoSize = true;
+            this.rbtnOther.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnOther.Location = new System.Drawing.Point(6, 64);
+            this.rbtnOther.Name = "rbtnOther";
+            this.rbtnOther.Size = new System.Drawing.Size(58, 20);
+            this.rbtnOther.TabIndex = 28;
+            this.rbtnOther.TabStop = true;
+            this.rbtnOther.Text = "Outro";
+            this.rbtnOther.UseVisualStyleBackColor = false;
+            // 
+            // rbtnFemale
+            // 
+            this.rbtnFemale.AutoSize = true;
+            this.rbtnFemale.BackColor = System.Drawing.Color.Transparent;
+            this.rbtnFemale.Location = new System.Drawing.Point(6, 41);
+            this.rbtnFemale.Name = "rbtnFemale";
+            this.rbtnFemale.Size = new System.Drawing.Size(81, 20);
+            this.rbtnFemale.TabIndex = 29;
+            this.rbtnFemale.TabStop = true;
+            this.rbtnFemale.Text = "Feminino";
+            this.rbtnFemale.UseVisualStyleBackColor = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.rbtnFemale);
+            this.groupBox1.Controls.Add(this.rbtnMale);
+            this.groupBox1.Controls.Add(this.rbtnOther);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(11, 191);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(120, 87);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Genero";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Formulario_de_cadastro.Properties.Resources._90278;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ClientSize = new System.Drawing.Size(800, 531);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.panel3);
@@ -386,6 +453,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,6 +492,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtnFemale;
+        private System.Windows.Forms.RadioButton rbtnMale;
+        private System.Windows.Forms.RadioButton rbtnOther;
     }
 }
 

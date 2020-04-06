@@ -36,6 +36,22 @@ namespace Formulario_de_cadastro
             string Numero = txtNumber.Text;
             string Senha = txtPassword.Text;
 
+            string sColor = "";
+            if (rbtnMale.Checked)
+            {
+                sColor = rbtnMale.Text;
+            }
+
+            if (rbtnFemale.Checked)
+            {
+                sColor = rbtnFemale.Text;
+            }
+
+            if (rbtnOther.Checked)
+            {
+                sColor = rbtnOther.Text;
+            }
+
             MessageBox.Show("Ola," + Nome + " " + Sobrenome + ",bem vindo ao sistema!!!");
         }
 
