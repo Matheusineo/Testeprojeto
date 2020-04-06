@@ -40,9 +40,9 @@
             this.lblRg = new System.Windows.Forms.Label();
             this.txtRg = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -53,9 +53,14 @@
             this.txtNumber = new System.Windows.Forms.TextBox();
             this.txtCep = new System.Windows.Forms.TextBox();
             this.lblCep = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNeighborhood = new System.Windows.Forms.Label();
+            this.txtNeighborhood = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtName
@@ -102,7 +107,7 @@
             // lblCpf
             // 
             this.lblCpf.AutoSize = true;
-            this.lblCpf.Location = new System.Drawing.Point(8, 93);
+            this.lblCpf.Location = new System.Drawing.Point(8, 73);
             this.lblCpf.Name = "lblCpf";
             this.lblCpf.Size = new System.Drawing.Size(27, 13);
             this.lblCpf.TabIndex = 7;
@@ -156,7 +161,7 @@
             // 
             // txtCpf
             // 
-            this.txtCpf.Location = new System.Drawing.Point(11, 109);
+            this.txtCpf.Location = new System.Drawing.Point(11, 89);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(116, 20);
             this.txtCpf.TabIndex = 10;
@@ -164,7 +169,7 @@
             // lblRg
             // 
             this.lblRg.AutoSize = true;
-            this.lblRg.Location = new System.Drawing.Point(171, 93);
+            this.lblRg.Location = new System.Drawing.Point(171, 73);
             this.lblRg.Name = "lblRg";
             this.lblRg.Size = new System.Drawing.Size(23, 13);
             this.lblRg.TabIndex = 11;
@@ -172,7 +177,7 @@
             // 
             // txtRg
             // 
-            this.txtRg.Location = new System.Drawing.Point(174, 109);
+            this.txtRg.Location = new System.Drawing.Point(174, 89);
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(116, 20);
             this.txtRg.TabIndex = 12;
@@ -190,17 +195,18 @@
             this.panel1.Controls.Add(this.lblCpf);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(333, 146);
+            this.panel1.Size = new System.Drawing.Size(333, 128);
             this.panel1.TabIndex = 13;
             // 
-            // label2
+            // lblCity
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(171, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Cidade";
+            this.lblCity.AutoSize = true;
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.Location = new System.Drawing.Point(171, 17);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(52, 16);
+            this.lblCity.TabIndex = 14;
+            this.lblCity.Text = "Cidade";
             // 
             // txtCity
             // 
@@ -209,16 +215,16 @@
             this.txtCity.Size = new System.Drawing.Size(116, 20);
             this.txtCity.TabIndex = 15;
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(429, 229);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 16;
+            this.txtEmail.Location = new System.Drawing.Point(11, 23);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(119, 20);
+            this.txtEmail.TabIndex = 16;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(579, 229);
+            this.txtPassword.Location = new System.Drawing.Point(174, 23);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(119, 20);
             this.txtPassword.TabIndex = 17;
@@ -226,7 +232,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(429, 213);
+            this.lblEmail.Location = new System.Drawing.Point(11, 7);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(35, 13);
             this.lblEmail.TabIndex = 18;
@@ -235,7 +241,8 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(579, 213);
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassword.Location = new System.Drawing.Point(174, 7);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(38, 13);
             this.lblPassword.TabIndex = 19;
@@ -260,6 +267,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.txtNeighborhood);
+            this.panel2.Controls.Add(this.lblNeighborhood);
             this.panel2.Controls.Add(this.lblCep);
             this.panel2.Controls.Add(this.txtNumber);
             this.panel2.Controls.Add(this.txtCep);
@@ -269,10 +278,10 @@
             this.panel2.Controls.Add(this.lblPublicplace);
             this.panel2.Controls.Add(this.lblState);
             this.panel2.Controls.Add(this.txtCity);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 181);
+            this.panel2.Controls.Add(this.lblCity);
+            this.panel2.Location = new System.Drawing.Point(12, 146);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(333, 231);
+            this.panel2.Size = new System.Drawing.Size(333, 194);
             this.panel2.TabIndex = 22;
             // 
             // lblNumber
@@ -307,35 +316,76 @@
             this.lblCep.TabIndex = 24;
             this.lblCep.Text = "CEP";
             // 
-            // label3
+            // lblNeighborhood
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(446, 312);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "label3";
+            this.lblNeighborhood.AutoSize = true;
+            this.lblNeighborhood.Location = new System.Drawing.Point(171, 140);
+            this.lblNeighborhood.Name = "lblNeighborhood";
+            this.lblNeighborhood.Size = new System.Drawing.Size(34, 13);
+            this.lblNeighborhood.TabIndex = 23;
+            this.lblNeighborhood.Text = "Bairro";
+            // 
+            // txtNeighborhood
+            // 
+            this.txtNeighborhood.Location = new System.Drawing.Point(174, 156);
+            this.txtNeighborhood.Name = "txtNeighborhood";
+            this.txtNeighborhood.Size = new System.Drawing.Size(116, 20);
+            this.txtNeighborhood.TabIndex = 23;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.txtPassword);
+            this.panel3.Controls.Add(this.txtEmail);
+            this.panel3.Controls.Add(this.lblPassword);
+            this.panel3.Controls.Add(this.lblEmail);
+            this.panel3.Location = new System.Drawing.Point(12, 346);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(333, 61);
+            this.panel3.TabIndex = 23;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(270, 413);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 24;
+            this.btnSave.Text = "Salvar";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(169, 413);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 25;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
+            this.BackgroundImage = global::Formulario_de_cadastro.Properties.Resources._90278;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Formulario de cadastro";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,9 +405,9 @@
         private System.Windows.Forms.Label lblRg;
         private System.Windows.Forms.TextBox txtRg;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.TextBox txtCity;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPassword;
@@ -368,7 +418,11 @@
         private System.Windows.Forms.TextBox txtNumber;
         private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label lblNumber;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNeighborhood;
+        private System.Windows.Forms.TextBox txtNeighborhood;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
 
